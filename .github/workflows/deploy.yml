@@ -1,0 +1,56 @@
+name: Site
+
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", ".htmlvalidate.json", ".github/workflows/deploy.yml"]
+  pull_request:
+    paths: ["site/**", ".htmlvalidate.json", ".github/workflows/deploy.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate HTML
+        run: npx --yes html-validate@9 "site/**/*.html"
+
+      - name: Block unfinished placeholders
+        run: |
+          if grep -rn "GITHUB_USERNAME" site/; then
+            echo "::error::Replace GITHUB_USERNAME in site/ before deploying."
+            exit 1
+          fi
+
+      - name: Check the CV file exists
+        run: test -s site/cv/Xiao_Liang_CV.pdf
+
+  deploy:
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://liangxiao.de
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=liangxiao-site --branch=main --commit-dirty=true

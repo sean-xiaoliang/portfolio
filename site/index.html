@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xiao (Sean) Liang · DevOps and Cloud Engineer, Auckland</title>
+  <meta name="description" content="Xiao (Sean) Liang: DevOps and cloud engineer in Auckland. Ten years of enterprise IT operations, now building and deploying software on a Master of Software Engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Xiao (Sean) Liang · DevOps and Cloud Engineer">
+  <meta property="og:description" content="Ten years of enterprise IT operations, now building and deploying software. Based in Auckland.">
+  <meta property="og:url" content="https://liangxiao.de/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://liangxiao.de/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="mark" href="#top" aria-label="Back to top">XL</a>
+      <nav aria-label="Sections">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <p class="role">DevOps and cloud engineer · Auckland</p>
+      <h1>Xiao (Sean) Liang</h1>
+      <p class="lede">I spent ten years keeping enterprise systems running for DXC Technology, ANZ Bank and Nokia. Now I build and deploy software too, on a Master of Software Engineering finishing April 2027.</p>
+      <div class="actions">
+        <a class="btn primary" href="/cv/Xiao_Liang_CV.pdf" download>Download CV</a>
+        <a class="btn" href="mailto:liangxiaoisme@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/sean-liang-628704115" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/GITHUB_USERNAME" rel="noopener">GitHub</a>
+      </div>
+
+      <figure class="pipeline" aria-labelledby="pipeline-cap">
+        <figcaption id="pipeline-cap">Career pipeline</figcaption>
+        <ol>
+          <li class="stage done"><span class="yr">2012</span><span class="name">Helpdesk</span><span class="where">DB Schenker</span></li>
+          <li class="stage done"><span class="yr">2017</span><span class="name">On-site engineering</span><span class="where">Nokia</span></li>
+          <li class="stage done"><span class="yr">2019</span><span class="name">Virtual desktops and endpoints</span><span class="where">ANZ Bank</span></li>
+          <li class="stage done"><span class="yr">2023</span><span class="name">Monitoring 30,000+ hosts</span><span class="where">Zabbix, Ansible</span></li>
+          <li class="stage done"><span class="yr">2024</span><span class="name">Change and incident lead</span><span class="where">DXC Technology</span></li>
+          <li class="stage done"><span class="yr">2026</span><span class="name">Building software</span><span class="where">Master's, Auckland</span></li>
+          <li class="stage next"><span class="yr">Next</span><span class="name">DevOps role</span><span class="where">in New Zealand</span></li>
+        </ol>
+      </figure>
+    </section>
+
+    <section class="section wrap" id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+      <p class="intro">What I have built and run since starting the Master's.</p>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Sentinel+ healthcare compliance platform</h3>
+          <p class="meta">Team of two · Jun – Jul 2026</p>
+        </div>
+        <div class="project-body">
+          <p>Healthcare providers track staff training, compliance and risk across scattered tools. Sentinel+ brings them into one platform.</p>
+          <ul>
+            <li>Ran six services (Django REST API, React, PostgreSQL, Celery with RabbitMQ, MinIO, Ollama) together with Docker Compose.</li>
+            <li>Built a RAG assistant on a local Ollama model, so documents never leave the deployment.</li>
+            <li>Covered the codebase with 124 automated pytest tests, delivered over three two-week sprints.</li>
+          </ul>
+          <ul class="tags"><li>Docker Compose</li><li>Django REST</li><li>React</li><li>PostgreSQL</li><li>Celery</li><li>RabbitMQ</li><li>pytest</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>This website</h3>
+          <p class="meta">Infrastructure as code · 2026</p>
+        </div>
+        <div class="project-body">
+          <p>A static site with its hosting, domain and DNS defined in Terraform, and every push to <code>main</code> checked and deployed by GitHub Actions.</p>
+          <ul>
+            <li>Cloudflare Pages project, custom domain and DNS records managed by Terraform, so the setup can be rebuilt from the repo.</li>
+            <li>Pipeline validates the HTML and Terraform on each pull request, then deploys with Wrangler on merge.</li>
+            <li>Security headers (CSP, HSTS, frame and referrer policies) shipped with the site itself.</li>
+          </ul>
+          <ul class="tags"><li>Terraform</li><li>GitHub Actions</li><li>Cloudflare Pages</li><li>Wrangler</li></ul>
+          <p class="links"><a href="https://github.com/GITHUB_USERNAME/liangxiao-site" rel="noopener">Source on GitHub</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>AWS cloud security and serverless research</h3>
+          <p class="meta">Coursework · 2026</p>
+        </div>
+        <div class="project-body">
+          <ul>
+            <li>Built a hands-on AWS security setup in Learner Lab, including an ACM TLS certificate issued for liangxiao.de.</li>
+            <li>Evaluated security controls for a cloud-migrated e-commerce platform and recommended options.</li>
+            <li>Designed a predictive pre-warming controller and a Bayesian configuration optimiser for AWS Lambda cold starts, in a 6,000-word research proposal.</li>
+          </ul>
+          <ul class="tags"><li>AWS IAM</li><li>VPC</li><li>ACM</li><li>Lambda</li><li>Design Science Research</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Homelab and personal cloud</h3>
+          <p class="meta">Ongoing</p>
+        </div>
+        <div class="project-body">
+          <ul>
+            <li>Self-hosted NAS on an RK3568 ARM board, reached remotely through Cloudflare Zero Trust tunnels with no inbound ports open.</li>
+            <li>Recovered the board from a soft-brick through Maskrom mode, then self-hosted an AI agent platform on it.</li>
+          </ul>
+          <ul class="tags"><li>Linux</li><li>Cloudflare Tunnel</li><li>SSH</li><li>ARM</li></ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section wrap" id="experience" aria-labelledby="experience-h">
+      <h2 id="experience-h">Experience</h2>
+
+      <ol class="timeline">
+        <li>
+          <p class="when">Oct 2024 – Apr 2025</p>
+          <h3>Senior Analyst I, Infrastructure Services</h3>
+          <p class="org">DXC Technology, client ExxonMobil · Shenzhen</p>
+          <ul>
+            <li>Led the on-site support team to meet agreed service levels.</li>
+            <li>Presented change requests at CAB and CRB meetings, with scope, risk and implementation plans.</li>
+            <li>Ran root cause analysis for major incidents and tracked fixes to closure.</li>
+            <li>Took part in internal audits and vulnerability assessment tests.</li>
+          </ul>
+        </li>
+        <li>
+          <p class="when">Jul 2023 – Sep 2024</p>
+          <h3>IT Supervisor</h3>
+          <p class="org">China National Chemical Engineering &amp; Construction Corporation Seven · Chengdu</p>
+          <ul>
+            <li>Monitored a 30,000+ host estate with Zabbix, Prometheus and Grafana.</li>
+            <li>Deployed Zabbix agents and scripts in bulk with Ansible and built custom monitoring templates.</li>
+            <li>Wrote Python scripts that replaced repetitive manual operations tasks, plus runbooks for the team.</li>
+          </ul>
+        </li>
+        <li>
+          <p class="when">Feb 2019 – Jan 2022</p>
+          <h3>Technical Support Specialist</h3>
+          <p class="org">ANZ Bank Service Centre · Chengdu</p>
+          <ul>
+            <li>Supported VMware Horizon virtual desktops and Workspace ONE endpoint management for bank staff.</li>
+            <li>Managed desktop pools, image updates and Identity Manager access issues.</li>
+          </ul>
+        </li>
+        <li>
+          <p class="when">Feb 2017 – Feb 2019</p>
+          <h3>Onsite Support Engineer</h3>
+          <p class="org">Nokia · Chengdu</p>
+          <ul>
+            <li>Break-fix, data recovery and hands-on tasks on servers and network equipment for remote teams, tracked against SLAs.</li>
+          </ul>
+        </li>
+        <li>
+          <p class="when">Feb 2012 – May 2016</p>
+          <h3>Helpdesk Support</h3>
+          <p class="org">DB Schenker · Chengdu</p>
+          <ul>
+            <li>First-line support for warehouse staff across desktops, email, business applications and RF scanners.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section wrap" id="toolkit" aria-labelledby="toolkit-h">
+      <h2 id="toolkit-h">Toolkit</h2>
+      <dl class="toolkit">
+        <div><dt>Cloud</dt><dd>AWS (EC2, S3, IAM, VPC, Lambda, RDS, ACM), Azure, Cloudflare</dd></div>
+        <div><dt>Delivery</dt><dd>Docker, Docker Compose, Terraform, GitHub Actions, Git</dd></div>
+        <div><dt>Automation</dt><dd>Python, Bash, Ansible, PowerShell</dd></div>
+        <div><dt>Monitoring</dt><dd>Zabbix, Prometheus, Grafana</dd></div>
+        <div><dt>Development</dt><dd>Django REST Framework, React, PostgreSQL, MySQL</dd></div>
+        <div><dt>Systems</dt><dd>Linux, Windows Server, Active Directory, Intune, VMware Horizon</dd></div>
+        <div><dt>Service management</dt><dd>ITIL, ServiceNow, CAB change control, root cause analysis</dd></div>
+      </dl>
+
+      <h3 class="sub">Certifications</h3>
+      <ul class="certs">
+        <li><span>AWS Certified Solutions Architect – Associate</span><span class="status">In progress</span></li>
+        <li><span>Microsoft Azure Fundamentals (AZ-900)</span><span class="status ok">Certified</span></li>
+        <li><span>Microsoft Azure AI Fundamentals (AI-900)</span><span class="status ok">Certified</span></li>
+        <li><span>ITIL Foundation</span><span class="status ok">Certified</span></li>
+      </ul>
+    </section>
+
+    <section class="section wrap" id="about" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <div class="about">
+        <div class="prose">
+          <p>I started on a warehouse helpdesk in Chengdu in 2012, fixing desktops, printers and RF scanners. Over the next decade the systems got bigger: virtual desktops for a bank, then a monitoring estate of more than 30,000 hosts, then leading an on-site team and taking changes through CAB for DXC.</p>
+          <p>Most of that work was on the operations side. I saw what happens when a release lands without monitoring, or a change goes in without a rollback plan. In 2026 I started a Master's in Auckland to learn the other side properly: writing, testing and shipping software.</p>
+          <p>That combination is what I want to bring to a DevOps team in New Zealand: I can follow the code, and I know what it takes to keep it running once it ships.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Studying</dt><dd>Master of Software Engineering, Yoobee College, Auckland (to Apr 2027)</dd></div>
+          <div><dt>Location</dt><dd>North Shore, Auckland</dd></div>
+          <div><dt>Work rights</dt><dd>Student visa: part-time during study, full-time in scheduled breaks</dd></div>
+          <div><dt>Languages</dt><dd>English (professional), Mandarin (native)</dd></div>
+          <div><dt>Licence</dt><dd>NZ full driver licence</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section wrap contact" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <p class="intro">Open to DevOps, cloud and platform roles in Auckland, including internships and graduate positions.</p>
+      <p class="email"><a href="mailto:liangxiaoisme@gmail.com">liangxiaoisme@gmail.com</a></p>
+      <div class="actions">
+        <a class="btn" href="https://www.linkedin.com/in/sean-liang-628704115" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/GITHUB_USERNAME" rel="noopener">GitHub</a>
+        <a class="btn" href="/cv/Xiao_Liang_CV.pdf" download>Download CV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>Deployed to Cloudflare Pages by GitHub Actions. Infrastructure in Terraform.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>
