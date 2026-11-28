@@ -84,4 +84,4 @@ Push to `main`, or run the **Site** workflow by hand from the *Actions* tab. The
 
 ## Security headers
 
-`site/_headers` sets a strict Content Security Policy (no scripts at all), HSTS, `X-Frame-Options: DENY`, a referrer policy and a permissions policy. If you add JavaScript or another font provider, update the CSP there or the browser will block it.
+`site/_headers` sets a strict Content Security Policy (scripts only from this site, nothing inline), HSTS, `X-Frame-Options: DENY`, a referrer policy and a permissions policy. If you add JavaScript or another font provider, update the CSP there or the browser will block it.
