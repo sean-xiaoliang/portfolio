@@ -245,7 +245,7 @@ h1 {
 .pipeline figcaption { font-weight: 600; margin-bottom: 14px; }
 .pipeline ol {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(7, 1fr); gap: 0;
+  display: grid; grid-template-columns: repeat(8, 1fr); gap: 0;
   position: relative;
 }
 .stage {
@@ -516,7 +516,8 @@ h3 { font: 600 1.3rem/1.25 var(--display); margin: 0; }
   .stage:nth-child(4), .stage:nth-child(4)::before { animation-delay: 1.16s; }
   .stage:nth-child(5), .stage:nth-child(5)::before { animation-delay: 1.28s; }
   .stage:nth-child(6), .stage:nth-child(6)::before { animation-delay: 1.40s; }
-  .stage:nth-child(7), .stage:nth-child(7)::before { animation-delay: 1.65s; }
+  .stage:nth-child(7), .stage:nth-child(7)::before { animation-delay: 1.52s; }
+  .stage:nth-child(8), .stage:nth-child(8)::before { animation-delay: 1.75s; }
   @media (max-width: 820px) {
     .stage::before { animation-name: grow-y; }
   }
