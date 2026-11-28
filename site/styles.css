@@ -396,6 +396,11 @@ h3 { font: 600 1.3rem/1.25 var(--display); margin: 0; }
 .timeline > li.sales::before { border-color: var(--pending); }
 .timeline > li:hover::before { background: var(--accent); scale: 1.25; }
 .timeline > li.sales:hover::before { background: var(--pending); }
+/* career breaks: lighter, dashed node, one line */
+.timeline > li.gap { padding-bottom: 28px; }
+.timeline > li.gap::before { border-style: dashed; border-color: var(--muted); }
+.timeline > li.gap:hover::before { background: var(--muted); }
+.timeline > li.gap h3 { font: 500 1rem/1.4 var(--body); color: var(--muted); font-style: italic; }
 .when { grid-row: 1 / span 3; margin: 2px 0 0; color: var(--muted); font-size: 0.95rem; font-variant-numeric: tabular-nums; text-align: right; }
 .org { margin: 4px 0 8px; color: var(--muted); }
 .timeline ul { margin: 0; padding-left: 1.1em; max-width: var(--measure); }
